@@ -51,6 +51,7 @@ const Camera = () => {
           files: [files],
         });
       } catch (error) {
+        alert("Error");
         console.error('Sharing failed using Web Share API:', error);
       }
     }
