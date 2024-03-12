@@ -39,19 +39,27 @@ const Camera = () => {
     const imageDataUrl = canvas.toDataURL('image/png');
     setCapturedImages((prevImages) => [...prevImages, imageDataUrl]);
   };
+  
   const handleShare = async () => {
-    if (navigator.canShare) {
-
+    if (navigator.canShare && capturedImages.length > 0) {
+      const imageDataUrl = capturedImages[capturedImages.length - 1];
+  
       try {
-        // Share the downloaded image as a file
+        const blob = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = (event) => resolve(event.target.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(new Blob([imageDataUrl.replace('data:image/png;base64,', '')], { type: 'image/png' }));
+        });
+  
         await navigator.share({
           title: 'Share this PWA!',
           text: 'Check out this amazing Progressive Web App!',
           url: window.location.href,
-          files: [files],
+          files: [blob],
         });
+        console.log('Shared using Web Share API');
       } catch (error) {
-        alert("Error");
         console.error('Sharing failed using Web Share API:', error);
       }
     }
@@ -70,10 +78,9 @@ const Camera = () => {
         ))}
       </div>
 
-      <label
+      {/* <label
         htmlFor="imageFile"
       >
-        {/* djfkdjkj */}
         <MdAddAPhoto size={55} />
 
         <strong style={{ fontSize: "1.2rem" }}>फ़ोटो खिचे</strong>
@@ -86,7 +93,7 @@ const Camera = () => {
           capture="camera"
           onChange={(e) => setFiles(e.target.files[0])}
         />
-      </label>
+      </label> */}
 
       <br />
 
