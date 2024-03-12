@@ -1,0 +1,26 @@
+.remarkWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+  /* border: var(--test-border); */
+}
+
+.remarkWrapper>span {
+  position: relative;
+  display: flex;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  /* border: var(--test-border); */
+}
+
+.remarkWrapper>p {
+  position: relative;
+  display: flex;
+  width: 100%;
+  font-size: .8rem;
+  margin-top: .5rem;
+  /* border: var(--test-border); */
+}

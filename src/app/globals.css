@@ -1,0 +1,80 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --test-border: 0.1rem solid black;
+  --sidepanel-width: 4rem;
+  --sidepanel-height: 3rem;
+  --footer-height: 1.5rem;
+  --header-height: 3rem;
+  --header-height-mobile: 2.5rem;
+  --navigator-height: 3.5rem;
+  --primary-color: rgb(37, 76, 149);
+  /* --primary-color: cornflowerblue; */
+  --primary-background-color: #e8ecf3 !important;
+  --button-color: #605f5f;
+  --border-color: #414040;
+  --font-roboto: "Outfit", sans-serif;
+  /* --primary-font-family : ; */
+}
+
+* {
+  font-family: var(--font-roboto);
+}
+
+* td {
+  padding: 7px 15px;
+}
+
+* a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.col-md-6.col-sm-12 {
+  padding-left: 0 !important;
+}
+
+body {
+  background-color: var(--primary-background-color) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* for responsive */
+/* width: "100%", height: "fit-content", maxHeight: "100%" */
+
+.cardContainer {
+  width: 90% !important;
+  height: fit-content !important;
+  max-height: 100% !important;
+}
+
+.buttons {
+  font-size: .8rem !important;
+  padding: .5% .8%;
+}
+
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    width: 100% !important;
+    height: fit-content !important;
+    max-height: 100% !important;
+  }
+
+  .buttons {
+    font-size: .7rem !important;
+    padding: 1% 2%;
+  }
+
+}

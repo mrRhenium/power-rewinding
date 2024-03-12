@@ -1,0 +1,76 @@
+.foldersContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* padding: 1rem .5rem; */
+  /* border: var(--test-border); */
+}
+
+.folderWrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  height: fit-content;
+  /* border: var(--test-border); */
+}
+
+.folderCover {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  /* border: var(--test-border); */
+}
+
+.folderIcon {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.folderCover span {
+  text-align: center;
+  font-size: .8rem;
+  width: 5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateY(-.4rem);
+}
+
+@media screen and (max-width: 768px) {
+  .foldersContainer {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .folderWrapper {
+    gap: 0rem;
+    padding: 0;
+  }
+
+
+  .folderCover span {
+    font-size: .5rem;
+  }
+
+  .folderIcon {
+    font-size: 3rem;
+  }
+
+  .folderCover {
+    width: calc(100% / 4);
+    height: fit-content;
+  }
+
+  .folderCover {
+    font-size: .5rem;
+  }
+}

@@ -1,0 +1,10 @@
+.flexContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width:786px) {
+    .flexContainer {
+        justify-content: flex-start;
+    }
+}

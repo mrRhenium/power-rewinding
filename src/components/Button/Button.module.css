@@ -1,0 +1,34 @@
+.btnParent {
+  display: flex;
+  justify-content: flex-start;
+  gap: .1rem;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+
+}
+
+.btnParent:hover {
+  color: #a0aaae !important;
+}
+
+.btnParent span {
+  margin-top: 4px;
+  width: 105%;
+}
+
+.arrowRight {
+  font-size: 2.2rem;
+  margin-right: 3%;
+}
+
+@media(max-width: 1025px) {
+  .arrowRight {
+    font-size: 1.5rem;
+  }
+
+  .btnParent span {
+    font-size: .8rem;
+    transform: translateY(-.1rem);
+  }
+}

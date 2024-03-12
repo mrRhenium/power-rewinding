@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* border: var(--test-border); */
+}
+
+.childerContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: .3rem 0;
+}
+
+.navigatorContainer {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .childerContainer {
+    display: flex;
+    width: 100%;
+    height: calc(100% - var(--navigator-height));
+    /* border: var(--test-border); */
+  }
+
+  .navigatorContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--navigator-height);
+    /* border: var(--test-border); */
+  }
+
+  .navIconWrapper {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: 75%;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    /* border: var(--test-border); */
+  }
+
+  .navIconWrapper>div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    padding: .1rem .8rem;
+  }
+
+  .navIconWrapper>div.active {
+    border-bottom: .13rem solid var(--primary-color);
+  }
+
+  .navIconWrapper .icons {
+    font-size: 1rem;
+  }
+
+  .navIconWrapper>div label,
+  .navIconWrapper>div a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: .65rem;
+  }
+}

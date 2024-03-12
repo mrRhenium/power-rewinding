@@ -1,0 +1,66 @@
+.mediaContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.mediaWrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  height: fit-content;
+  /* border: var(--test-border); */
+}
+
+.mediaCover {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  aspect-ratio: 1;
+  /* border: var(--test-border); */
+}
+
+.mediaIcon {
+  font-size: 3.5rem;
+  opacity: 0.8;
+}
+
+.mediaCover span {
+  text-align: center;
+  font-size: 0.5rem;
+  width: 5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .mediaContainer {
+    gap: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .mediaWrapper {
+    padding: .5rem;
+    gap: .65rem;
+  }
+
+  .mediaIcon {
+    font-size: 3rem;
+  }
+
+  .mediaCover {
+    width: calc(90% / 4);
+    aspect-ratio: 1;
+  }
+
+}

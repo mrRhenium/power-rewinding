@@ -1,0 +1,93 @@
+.captureContainer{
+    width:80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+.captureWrapper{
+    padding: 2rem;
+    display: flex;
+    width: 100%;
+    height: 90%;
+    gap: 2rem;
+    /* padding-top: 4rem; */
+    background-color: white;
+    /* border: 1px solid black; */
+}
+
+.captureImgWrapper{
+    width:50% ;
+    /* border: 1px solid black; */
+
+}
+.capture{
+    width: 100%;
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.Remark{
+   width: 50%;
+   /* border: 1px solid black; */
+   display: flex;
+   flex-direction: column;
+}
+
+.captureImg {
+    /* padding: 5rem; */
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.captureImg span{
+    font-size: 0.7rem;
+}
+
+.captureBtn{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin : 2rem 2rem
+  }
+  
+  .input label {
+    display: block;
+    font-size: 14px;
+    font-weight: unset;
+  }
+
+  .remarkInput{
+    width: 100%;
+    padding: 5px 10px;
+    font-weight: unset;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #484848;
+    font-size: 0.9rem;
+    margin-top: 1%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .remarkInput:focus {
+    outline: none;
+  }
+  .error{
+    color: red;
+    margin-top: 3%;
+    font-size: 12px;
+  }
