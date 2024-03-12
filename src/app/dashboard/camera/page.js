@@ -58,8 +58,8 @@ const Camera = () => {
           url: window.location.href,
           files: [blob],
         });
-        console.log('Shared using Web Share API');
       } catch (error) {
+        alert("something went wrong");
         console.error('Sharing failed using Web Share API:', error);
       }
     }
